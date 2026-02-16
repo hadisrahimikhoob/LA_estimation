@@ -5,7 +5,7 @@ from skimage import measure
 def otsu_threshold(img):
     """Apply Otsu thresholding."""
     _, binary = cv2.threshold(img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
-    binary = 255 - binary  # invert to match MATLAB ~imbinarize
+    binary = 255 - binary  
     return binary
 
 def fill_holes(binary_img):
